@@ -5,13 +5,13 @@ namespace ShapesTestLib.Shapes
     public abstract class Shape
     {
 
-        protected Shape([CallerMemberName]string name = "")
+        protected Shape(string name)
         {
             Name = name;
         }
 
         public string Name { get; }
-        public abstract double GetArea();
+        internal abstract double GetArea();
 
         public override string ToString()
         {
